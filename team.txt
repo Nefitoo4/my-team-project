@@ -2,3 +2,5 @@ Nefi Zaldana
 Web Development II
 https://cerulean-malasada-997780.netlify.app/
 
+Week 1
+
