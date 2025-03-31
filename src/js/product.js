@@ -11,7 +11,18 @@ productDetails.init();
 //define addProductToCart function
 function addProductToCart(product) {
   const cartItems = getLocalStorage("so-cart") || [];
-  cartItems.push(product);
+  const existingProduct = carItems.find((item) => item.Id === product.Id);
+
+  if (existingProduct) {
+    //if the product is in the cart, increment the quantity
+    existingProduct.quantity = (existingProduct.quantity || 1) + 1;
+  } else {
+    //if new, add the product with an initial of 1
+    product.quantity = 1;
+    cartItems.push(product);
+  }
+
+  //Keep the cart updated in localStorage
   setLocalStorage("so-cart", cartItems);
 }
 
