@@ -202,6 +202,13 @@ button {
   grid-column: 3;
 }
 
+/* Default styles for the cart */
+.products img {
+  width: 100%;
+  height: auto;
+}
+
+/* Adjust image sizes for larger screens*/
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
@@ -213,6 +220,15 @@ button {
   .cart-card {
     font-size: inherit;
     grid-template-columns: 150px auto 15%;
+  }
+  .products img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product img {
+    width: 33%;
   }
 }
 
